@@ -1,0 +1,44 @@
+.listing-picker-label {
+  color: black;
+  font-size: 18px;
+  text-transform: capitalize;
+  line-height: 40px;
+  font-weight: 900;
+}
+
+.listing-picker-input {
+  margin: 10px;
+  background-color: var(--theme-text-success);
+  color: var(--theme-text-light);
+  border: 1px solid var(--theme-text-dark);
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 225px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .listing-picker-label {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .listing-picker-input {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .listing-picker-label {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .listing-picker-input {
+    width: 100%;
+    font-size: 0.95rem;
+    margin: 8px 0 16px 0;
+  }
+}

@@ -1,0 +1,117 @@
+form {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--theme-background-light);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form label {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--theme-text-light);
+  margin: 10px 0;
+  text-align: left;
+}
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form select {
+  margin: 0px;
+  background-color: var(--theme-text-dark);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+}
+form input.error {
+  color: maroon;
+  font-size: 14px;
+  border: 1px solid maroon;
+  background-color: var(--theme-background-error);
+}
+.footer {
+  display: flex;
+  margin-top: 10px;
+}
+.footer button {
+  background-color: var(--theme-text-success);
+  justify-items: center;
+  color: var(--theme-text-light);
+  font-weight: bold;
+  border: none;
+  margin: 0 10px;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  flex-grow: 1;
+}
+@media (max-width: 800px) {
+  form {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+  form label {
+    text-align: center;
+  }
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="date"],
+  form select {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 900px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+    width: 95%;
+    padding: 12px;
+  }
+  .footer {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+    width: 92%;
+  }
+  form label {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="date"],
+  form select {
+    width: 94%;
+    margin: auto;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .footer button {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 6px;
+  }
+}

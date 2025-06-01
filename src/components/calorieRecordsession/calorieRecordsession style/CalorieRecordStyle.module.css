@@ -1,0 +1,85 @@
+.record {
+  border: 1px solid var(--theme-text-success);
+  margin: auto;
+  width: 70%;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--theme-background-light);
+  color: var(--theme-text-dark);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.record-list {
+  list-style: none;
+  border: 1px solid var(--theme-text-success);
+  padding: 1px;
+  border-radius: 5px;
+}
+.record-calories {
+  color: var(--theme-text-success);
+  font-weight: bold;
+}
+.record-delete-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--theme-text-danger);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.month {
+  color: darkred;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.day {
+  color: black;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+
+.year {
+  color: #666;
+  font-size: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .record {
+    width: 95%;
+    flex-direction: column;
+    padding: 8px;
+  }
+  .record-list {
+    padding: 0;
+  }
+}
+@media (max-width: 600px) {
+  .record {
+    width: 100%;
+    flex-direction: column;
+    padding: 4px;
+    font-size: 0.95rem;
+  }
+  .record-list {
+    padding: 0;
+  }
+  .record-delete-btn {
+    font-size: 0.7rem;
+    margin-top: 8px;
+  }
+}
+.no-records-message {
+  height: 100px;
+  width: 100%;
+  border: 1px solid var(--theme-text-success);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 100px;
+  margin: 20px 0;
+  font-size: 20px;
+  color: var(--theme-text-dark);
+}
