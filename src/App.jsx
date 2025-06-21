@@ -2,34 +2,12 @@ import { useState, useEffect } from "react";
 import CalorieRecordEdit from "./components/edit/CalorieRecordEdit";
 import ListingSection from "./components/calorieRecordsession/ListingSection";
 import styles from "./App.module.css";
-import Modal from "react-modal";
+import Modal from "./components/common/Modal";
 
 function App() {
   const [records, setRecords] = useState([]);
   const [nextId, setNextId] = useState(5);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const modalStyles = {
-    overlay: {
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
-      zIndex: 1000,
-    },
-    content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      backgroundColor: "var(--theme-background-dark",
-      transform: "translate(-50%, -50%)",
-      borderRadius: "12px",
-      padding: "32px",
-      boxShadow: "0 4px 32px rgba(0,0,0,0.2)",
-      border: "1px solid var(--theme-text-success)",
-      minWidth: "320px",
-      maxWidth: "90vw",
-    },
-  };
 
   function handleOpenModal() {
     setIsModalOpen(true);
@@ -101,7 +79,6 @@ function App() {
         isOpen={isModalOpen}
         onRequestClose={handleCloseModal}
         contentLabel="Calorie Record Modal"
-        style={modalStyles}
       >
         <CalorieRecordEdit
           onFormSubmit={formSubmitHandler}

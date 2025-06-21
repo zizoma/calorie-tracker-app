@@ -7,10 +7,16 @@
   --theme-text-error: #ff4d4d;
   --theme-background-error: #ffcccc;
 }
-
 body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+}
+#root {
   margin: auto;
   max-width: 1024px;
-  min-height: 100vh;
   padding: 30px;
 }
